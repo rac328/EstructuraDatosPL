@@ -1,0 +1,21 @@
+[{
+  "file": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\Proceso.hpp",
+  "directory": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1",
+  "command": "clang++ -c C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\Proceso.hpp -o C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\Proceso.hpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\NodoPila.hpp",
+  "directory": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1",
+  "command": "clang++ -c C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\NodoPila.hpp -o C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\NodoPila.hpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\NodoPila.cpp",
+  "directory": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1",
+  "command": "clang++ -c C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\NodoPila.cpp -o C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\NodoPila.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\Proceso.cpp",
+  "directory": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1",
+  "command": "clang++ -c C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\Proceso.cpp -o C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\src\\Proceso.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\main.cpp",
+  "directory": "C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1",
+  "command": "clang++ -c C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\main.cpp -o C:\\Users\\raulc\\Desktop\\Clase\\Universidad\\2Carrera\\1Cuatrimestre\\EstructurasDeDatos\\EstructuraDatosPL\\EstructuraDatosPL\\PL1\\main.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }]
