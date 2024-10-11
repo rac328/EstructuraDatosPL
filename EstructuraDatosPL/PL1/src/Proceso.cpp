@@ -1,5 +1,7 @@
 #include "Proceso.hpp"
+using namespace std;
 
+Proceso::Proceso(){}
 Proceso::Proceso(int pdi, char nombre[6], bool tipo, bool estado, int prioridad)
 {
 	this->pdi=pdi;
@@ -27,6 +29,14 @@ bool Proceso::getEstado(){
 
 bool Proceso::getTipo(){
 	return this->tipo;
+	}
+	
+void mostrarInfo(){
+	//no funciona
+	if(tipo)
+		cout << "Proceso normal" << endl;
+	else
+		cout << "Proceso en tiempo real" << endl;
 	}
 
 Proceso::~Proceso()
