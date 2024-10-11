@@ -1,18 +1,18 @@
 #include "Proceso.hpp"
 
-Proceso::Proceso()
+Proceso::Proceso(int pdi, char nombre[6], bool tipo, bool estado, int prioridad)
 {
-public:
-	Proceso()
-	
-private:
-	char nombre[];
-	bool estado;
-	bool tipo;
-	int prioridad;
-	int pdi;
-	
+	this->pdi=pdi;
+	strcpy(nombre, nombre);
+	this->tipo=tipo;
+	this->estado=estado;
+	this->prioridad=prioridad;
 }
+
+void Proceso::setPrioridad(int prio){
+	this->prioridad=(prio + 120);
+	}
+
 
 Proceso::~Proceso()
 {

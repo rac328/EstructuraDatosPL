@@ -94,10 +94,12 @@
   </Settings>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="SourceFiles">
+      <File Name="src/Lista.cpp"/>
       <File Name="src/NodoPila.cpp"/>
       <File Name="src/Proceso.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="HeaderFinder">
+      <File Name="src/Lista.hpp"/>
       <File Name="src/NodoPila.hpp"/>
       <File Name="src/Proceso.hpp"/>
     </VirtualDirectory>

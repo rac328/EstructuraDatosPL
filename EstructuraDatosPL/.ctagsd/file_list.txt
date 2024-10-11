@@ -1,0 +1,7 @@
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Lista.cpp
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.hpp
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Lista.hpp
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\main.cpp
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\src\NodoPila.cpp
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.cpp
+C:\Users\Ordenador\Documents\GitHub\EstructuraDatosPL\EstructuraDatosPL\PL1\src\NodoPila.hpp
