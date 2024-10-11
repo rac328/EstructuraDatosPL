@@ -1,4 +1,3 @@
-
 // #include <Gestor.hp6p>
 #include <iostream>
 using namespace std;

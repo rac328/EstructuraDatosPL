@@ -64,7 +64,7 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Users\Ordenador\Desktop\Programas\codelite-amd64-17.0.0\codelite
-Objects0=$(IntermediateDirectory)/src_Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Proceso.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Gestor.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Proceso.cpp$(ObjectSuffix) 
 
 
 
@@ -99,6 +99,11 @@ $(IntermediateDirectory)/src_Lista.cpp$(ObjectSuffix): src/Lista.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Ordenador/Documents/GitHub/EstructuraDatosPL/EstructuraDatosPL/PL1/src/Lista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Lista.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_Lista.cpp$(PreprocessSuffix): src/Lista.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Lista.cpp$(PreprocessSuffix) src/Lista.cpp
+
+$(IntermediateDirectory)/src_Gestor.cpp$(ObjectSuffix): src/Gestor.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Ordenador/Documents/GitHub/EstructuraDatosPL/EstructuraDatosPL/PL1/src/Gestor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Gestor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Gestor.cpp$(PreprocessSuffix): src/Gestor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Gestor.cpp$(PreprocessSuffix) src/Gestor.cpp
 
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Ordenador/Documents/GitHub/EstructuraDatosPL/EstructuraDatosPL/PL1/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
