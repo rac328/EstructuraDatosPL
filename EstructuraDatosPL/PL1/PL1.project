@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
     <VirtualDirectory Name="SourceFiles">
       <File Name="src/Pila.cpp"/>
       <File Name="src/Gestor.cpp"/>
@@ -107,6 +108,5 @@
       <File Name="src/NodoPila.hpp"/>
       <File Name="src/Proceso.hpp"/>
     </VirtualDirectory>
-    <File Name="main.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

@@ -1,12 +1,10 @@
-#ifndef GESTOR_HPP
-#define GESTOR_HPP
-#include "Proceso.hpp"
+#include "Pila.hpp"
 class Gestor
 {
 public:
 	Gestor();
 	~Gestor();
-	void ProcesosEnPila();
+	char ProcesosEnPila();
 	void ProcesosEnGPU0();
 	void ProcesosEnGPU1();
 	void ProcesosEnGPU2();
@@ -34,7 +32,6 @@ private:
 	int contadorTReal;
 	int arrayNormal[39];
 	int arrayTReal[100];
+	Pila pila;
 
 };
-
-#endif // GESTOR_HPP

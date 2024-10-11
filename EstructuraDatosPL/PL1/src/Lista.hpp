@@ -1,5 +1,3 @@
-#ifndef LISTA_HPP
-#define LISTA_HPP
 
 #include "Proceso.hpp"
 
@@ -20,5 +18,3 @@ private:
 	int Longitud;
 
 };
-
-#endif // LISTA_HPP

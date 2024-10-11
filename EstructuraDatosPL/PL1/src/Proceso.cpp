@@ -4,9 +4,9 @@ using namespace std;
 Proceso::Proceso(){}
 Proceso::Proceso(int pdi, char nombre[6], bool tipo, bool estado, int prioridad)
 {
-	this->pdi=pdi;
+	this->pdi= 300 + rand() % 1000;
 	strcpy(this->nombre, nombre);
-	this->tipo=tipo;
+	this->tipo= rand() % 2;
 	this->estado=estado;
 	this->prioridad=prioridad;
 }
@@ -31,7 +31,7 @@ bool Proceso::getTipo(){
 	return this->tipo;
 	}
 	
-void mostrarInfo(){
+void Proceso::mostrarInfo(){
 	//no funciona
 	if(tipo)
 		cout << "Proceso normal" << endl;

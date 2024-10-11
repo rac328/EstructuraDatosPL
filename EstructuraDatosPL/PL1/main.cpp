@@ -1,17 +1,17 @@
-// #include <Gestor.hp6p>
-#include <iostream>
+#include "src/Gestor.hpp"
+
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	// Gestor gestor;
+	Gestor gestor;
 	char opcion;
-
+	
 	do {
 
 		cout << "\n\t--------------------------------------------------------------"
 				"--------\n";
-		cout << "\tProcesos en la pila -> " << 0 /*gestor.ProcesosEnPila()*/
+		cout << "\tProcesos en la pila -> " << gestor.ProcesosEnPila()
 			 << "\n\tProcesos en las colas:\n \t\tGPU 0-> " << 0 /*gestor.ProcesosEnGPU0() */ << "\tGPU 1-> "
 			 << 0 /*gestor.ProcesosEnGPU1() */ << "\tGPU 2-> " << 0 /*gestor.ProcesosEnGPU2() */ << "\tGPU 3-> "
 			 << 0 /*gestor.ProcesosEnGPU3()*/

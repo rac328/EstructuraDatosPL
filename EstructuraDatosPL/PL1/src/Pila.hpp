@@ -1,5 +1,3 @@
-#ifndef PILA_HPP
-#define PILA_HPP
 #include "NodoPila.hpp"
 
 class Pila
@@ -17,5 +15,3 @@ private:
 	pNodoP ultimo;
 	int longitud;
 	};
-
-#endif // PILA_HPP
