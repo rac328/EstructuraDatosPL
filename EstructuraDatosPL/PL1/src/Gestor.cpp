@@ -17,6 +17,7 @@ int Gestor::ProcesosEnPila(){
 	
 void Gestor::genera12Procesos(){
 	int arrayPDI[12];
+	int arrayprioridad
 	int prioridad;
 	string nombre = "user";
 	string resultado;
