@@ -1,3 +1,5 @@
+#ifndef PROCESO_HPP // Guardas de inclusión
+#define PROCESO_HPP
 #include <iostream>
 #include <string.h>
 #include <stdio.h>
@@ -28,4 +30,4 @@ private:
 	int prioridad;
 
 };
-
+#endif // PROCESO_HPP

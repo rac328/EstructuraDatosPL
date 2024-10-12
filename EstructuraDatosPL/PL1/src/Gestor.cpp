@@ -1,6 +1,7 @@
 #include "Gestor.hpp"
 #include <algorithm>
 #include <sstream>
+#include <vector>
 using namespace std;
 Gestor::Gestor()
 {
@@ -10,6 +11,8 @@ Gestor::Gestor()
 	this->contadorPrioridadTR=0;
 	//Istanciar las GPUs
 	Pila pila;
+	/*Cola gpuNormal0, gpuNormal1;
+	Cola gpuTR2, gpuTR3;*/
 }
 int Gestor::ProcesosEnPila(){
 	return pila.getLongitud();  
@@ -17,8 +20,7 @@ int Gestor::ProcesosEnPila(){
 	
 void Gestor::genera12Procesos(){
 	int arrayPDI[12];
-	int arrayprioridad
-	int prioridad;
+	int prioridad = 0;
 	string nombre = "user";
 	string resultado;
 	stringstream sstm;
@@ -72,6 +74,55 @@ void Gestor::borraProcesosPila(){
 		pila.borrar();
 	}
 }
+
+
+bool compararPrioridad(Proceso* a, Proceso* b) {
+    return a->getPrioridad() < b->getPrioridad(); // Ordena de menor a mayor prioridad
+}
+
+
+//he buscado como hacer de manera facil lo de ordenar y lo podemos hacer con un vector y std::sort
+void Gestor::encolarProcesos(){
+	vector<Proceso*> procesos;
+	
+	while (pila.getLongitud() > 0){
+		Proceso* proceso = pila.extraer();
+		procesos.push_back(proceso); //push_back se usa para introducir al vector procesos el proceso extraido de la pila
+	}
+	
+	sort(procesos.begin(), procesos.end(), compararPrioridad); //esto ordena el vector que hemos creado en funcion de la prioridad
+	
+	for (Proceso* proceso : procesos) {
+		if (proceso->getTipo()){ //esto es que es de tipo normal
+			if (gpuNormal0.getLongitud() <= gpuNormal1.getLongitud()){ //si una cola tiene menos que otra, 
+			//se mete el proceso en la que menos tiene, pero si los dos tienen igual, se mete al primero
+				gpuNormal0.encolar(proceso);
+			}else{
+				gpuNormal1.encolar(proceso);
+			}
+		}else{ //lo mismo para los de tiempo real
+			if(gpuTR2.getLongitud() <= gpuTR3.getLongitud()){
+				gpuTR2.encolar(proceso);
+			}else{
+				gpuTR3.encolar(proceso);
+			}
+		}
+	}
+}
+
+int Gestor::ProcesosEnGPU0(){
+	return gpuNormal0.getLongitud();
+}
+int Gestor::ProcesosEnGPU1(){
+	return gpuNormal1.getLongitud();
+}
+int Gestor::ProcesosEnGPU2(){
+	return gpuTR2.getLongitud();
+}
+int Gestor::ProcesosEnGPU3(){
+	return gpuTR3.getLongitud();
+}
+
 Gestor::~Gestor()
 {	
 }

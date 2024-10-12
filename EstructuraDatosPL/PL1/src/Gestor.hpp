@@ -1,14 +1,15 @@
 #include "Pila.hpp"
+#include "Cola.hpp"
 class Gestor
 {
 public:
 	Gestor();
 	~Gestor();
 	int ProcesosEnPila();
-	void ProcesosEnGPU0();
-	void ProcesosEnGPU1();
-	void ProcesosEnGPU2();
-	void ProcesosEnGPU3();
+	int ProcesosEnGPU0();
+	int ProcesosEnGPU1();
+	int ProcesosEnGPU2();
+	int ProcesosEnGPU3();
 	void ProcesosEnListaNormal();
 	void ProcesosEnListaTiempoReal();
 	void ProcesosEnArbol();
@@ -29,6 +30,8 @@ public:
 	
 private:
 	Pila pila;
+	Cola gpuNormal0, gpuNormal1;
+	Cola gpuTR2, gpuTR3;
 	int contadorPDI;
 	int contadorNombre;
 	int contadorPrioridadNormal;
