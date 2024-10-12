@@ -1,4 +1,5 @@
 #include "src/Gestor.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -62,9 +63,9 @@ int main(int argc, char** argv)
 		opcion = toupper(opcion);
 		// system("clear");
 		system("cls");
-
+		
 		switch(opcion) {
-
+	
 		case 'A':
 			gestor.genera12Procesos();
 			break;
@@ -72,7 +73,7 @@ int main(int argc, char** argv)
 			gestor.muestraProcesos();
 			break;
 		case 'C':
-			// gestor.borraProcesosPila();
+			gestor.borraProcesosPila();
 			break;
 		case 'D':
 			// gestor.encolarProcesos();
@@ -128,9 +129,10 @@ int main(int argc, char** argv)
 		case 'V':
 			//...;
 			break;
-		case 'W':
+		//case 'W':
+		//	gestor.borraProcesosPila();
 			//...;
-			break;
+		//	break;
 		case 'S':
 			cout << "Saliendo del programa...\n";
 			break;

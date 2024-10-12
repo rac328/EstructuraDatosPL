@@ -9,7 +9,7 @@ Gestor::Gestor()
 	this->contadorPDI=1;
 	this->contadorNombre=0;
 	//Istanciar las GPUs
-	Pila pila;
+	//Pila pila;
 }
 int Gestor::ProcesosEnPila(){
 	return pila.getLongitud();  
@@ -39,6 +39,12 @@ void Gestor::genera12Procesos(){
 void Gestor::muestraProcesos(){
 	pila.mostrarInfoB();
 	}
+	
+void Gestor::borraProcesosPila(){
+	while (pila.getLongitud()>0){
+		pila.borrar();
+	}
+}
 Gestor::~Gestor()
 {	
 }

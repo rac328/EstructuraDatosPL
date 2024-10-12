@@ -1,4 +1,5 @@
 #include "Proceso.hpp"
+#include <iostream>
 using namespace std;
 
 Proceso::Proceso(){}
@@ -33,12 +34,11 @@ bool Proceso::getTipo(){
 	
 void Proceso::mostrarInfoBasico(){
 	if(this->tipo)
-		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "normal" <<" ejecutado por "<<nombre<<endl;
+		cout << "El proceso cuyo PDI es " << 300 + this->pdi << " es de tipo " << "normal" <<" ejecutado por "<< nombre << "con prioridad" << this->getPrioridad() << endl;
 	else
-		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "en tiempo real" <<" ejecutado por "<<nombre<<endl;
+		cout << "El proceso cuyo PDI es " << 300 + this->pdi << " es de tipo " << "en tiempo real" <<" ejecutado por "<< nombre<< "con prioridad" << this->getPrioridad() << endl;
 	}
 
 Proceso::~Proceso()
 {
 }
-

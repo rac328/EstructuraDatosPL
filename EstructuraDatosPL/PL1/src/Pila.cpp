@@ -23,6 +23,18 @@ Proceso* Pila::extraer(){
 	delete nodo;
 	return proceso;
 	}
+	
+
+void Pila::borrar() {
+    if (ultimo == nullptr) {  
+        std::cout << "Error: La pila está vacía, no se puede borrar." << std::endl;
+        return;
+    }
+    pNodoP nodo = ultimo;
+    ultimo = nodo->siguiente;  
+    longitud--;  
+    delete nodo;  
+}
 
 Proceso* Pila::cima(){
 	return ultimo->valorProceso ;

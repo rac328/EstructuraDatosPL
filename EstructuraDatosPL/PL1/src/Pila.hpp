@@ -8,6 +8,7 @@ public:
 	void insertar(Proceso* proceso);
 	Proceso* extraer();
 	Proceso* cima();
+	void borrar();
 	void mostrarInfoB();
 	int getLongitud();
 	

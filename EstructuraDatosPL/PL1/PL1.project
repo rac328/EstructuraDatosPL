@@ -2,6 +2,23 @@
 <CodeLite_Project Name="PL1" Version="11000" InternalType="Console">
   <Description/>
   <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <VirtualDirectory Name="SourceFiles">
+      <File Name="src/Pila.cpp"/>
+      <File Name="src/Gestor.cpp"/>
+      <File Name="src/Lista.cpp"/>
+      <File Name="src/NodoPila.cpp"/>
+      <File Name="src/Proceso.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="HeaderFinder">
+      <File Name="src/Pila.hpp"/>
+      <File Name="src/Gestor.hpp"/>
+      <File Name="src/Lista.hpp"/>
+      <File Name="src/NodoPila.hpp"/>
+      <File Name="src/Proceso.hpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -92,21 +109,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <VirtualDirectory Name="SourceFiles">
-      <File Name="src/Pila.cpp"/>
-      <File Name="src/Gestor.cpp"/>
-      <File Name="src/Lista.cpp"/>
-      <File Name="src/NodoPila.cpp"/>
-      <File Name="src/Proceso.cpp"/>
-    </VirtualDirectory>
-    <VirtualDirectory Name="HeaderFinder">
-      <File Name="src/Pila.hpp"/>
-      <File Name="src/Gestor.hpp"/>
-      <File Name="src/Lista.hpp"/>
-      <File Name="src/NodoPila.hpp"/>
-      <File Name="src/Proceso.hpp"/>
-    </VirtualDirectory>
-  </VirtualDirectory>
 </CodeLite_Project>
