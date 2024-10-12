@@ -20,29 +20,28 @@ void Cola::encolar(Proceso* proceso)
 }
 void Cola::mostrar()
 {
-    /*pnodoCola aux = primero;
-    cout << "\tEl contenido de la cola es: ";
+    pnodoCola aux = primero;
     while(aux) {
-        cout << "-> " << aux->valor;
+        aux->valorProceso->mostrarInfoEstado();
         aux = aux->siguiente;
     }
-    cout << endl;*/
 }
-int Cola::eliminar()
-{
-    /*pnodoCola nodo;
-    int v;
-    nodo = primero;
-    if(!nodo)
-        return 0;
-    primero = nodo->siguiente;
-    v = nodo->valor;
-    delete nodo;
-    if(!primero)
-        ultimo = NULL;
-    longitud--;
-    return v;*/	
-	return 0;
+void Cola::eliminar(){
+    pnodoCola nodo;
+	nodo = primero;
+	if(nodo == NULL){
+		}
+	else{
+		while(longitud > 0){
+		nodo = primero;
+		primero = nodo->siguiente;
+		delete nodo;
+		if(!primero){
+			ultimo = NULL;
+			}
+		longitud--;			
+			}
+		}
 }
 
 int Cola::getLongitud(){

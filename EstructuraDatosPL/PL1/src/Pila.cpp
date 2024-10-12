@@ -27,7 +27,7 @@ Proceso* Pila::extraer(){
 
 void Pila::borrar() {
     if (ultimo == nullptr) {  
-        std::cout << "Error: La pila está vacía, no se puede borrar." << std::endl;
+        cout << "Error: La pila está vacía, no se puede borrar." << endl;
         return;
     }
     pNodoP nodo = ultimo;

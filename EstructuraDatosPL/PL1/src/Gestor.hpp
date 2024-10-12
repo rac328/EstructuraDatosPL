@@ -16,6 +16,7 @@ public:
 	void genera12Procesos();
 	void muestraProcesos();
 	void borraProcesosPila();
+	void borraProcesosColas();
 	void encolarProcesos();
 	void muestraProcesosGPUs0y1();
 	void muestraProcesosGPUs2y3();

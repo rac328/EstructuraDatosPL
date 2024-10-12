@@ -33,12 +33,21 @@ bool Proceso::getTipo(){
 	}
 	
 void Proceso::mostrarInfoBasico(){
-	if(this->tipo)
+	if(this->tipo){
 		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "normal" <<" ejecutado por "<< this->nombre << " con prioridad " << this->prioridad << endl;
-	else
+		}
+	else{
 		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "en tiempo real" <<" ejecutado por "<< this->nombre<< " con prioridad " << this->prioridad << endl;
+		}
 	}
-
+void Proceso::mostrarInfoEstado(){
+	if(this->tipo){
+			cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "normal, su estado es parado y su prioridad es: " << this->prioridad << endl;
+		}
+	else{
+			cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "en tiempo real, su estado es parado y su prioridad es: " << this->prioridad << endl;
+		}
+	}
 Proceso::~Proceso()
 {
 }

@@ -21,6 +21,7 @@ public:
 	void setPrioridad(int prio);
 	int getPDI();
 	void mostrarInfoBasico();
+	void mostrarInfoEstado();
 	
 private:
 	int pdi;

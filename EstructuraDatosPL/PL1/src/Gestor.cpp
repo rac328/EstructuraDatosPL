@@ -11,8 +11,8 @@ Gestor::Gestor()
 	this->contadorPrioridadTR=0;
 	//Istanciar las GPUs
 	Pila pila;
-	/*Cola gpuNormal0, gpuNormal1;
-	Cola gpuTR2, gpuTR3;*/
+	Cola gpuNormal0, gpuNormal1;
+	Cola gpuTR2, gpuTR3;
 }
 int Gestor::ProcesosEnPila(){
 	return pila.getLongitud();  
@@ -42,7 +42,7 @@ void Gestor::genera12Procesos(){
 				contadorPrioridadNormal++;
 				}
 			else{
-				cout << "No se admiten más procesos normales";
+				cout << "No se admiten mas procesos normales" <<endl;
 				prioridad = 120 + contadorPrioridadNormal;
 				}
 			}
@@ -52,11 +52,10 @@ void Gestor::genera12Procesos(){
 				contadorPrioridadTR++;
 				}
 			else{
-				cout << "No se admiten más procesos en tiempo real";
+				cout << "No se admiten mas procesos en tiempo real" <<endl;
 				prioridad = contadorPrioridadTR;
 				}
 			}
-			cout << "me cago en todo" <<endl;
 		Proceso* proceso = new Proceso(arrayPDI[i], resultado, tipoProceso, false, prioridad);
 		pila.insertar(proceso);
 		contadorNombre++;
@@ -87,7 +86,7 @@ void Gestor::encolarProcesos(){
 	
 	while (pila.getLongitud() > 0){
 		Proceso* proceso = pila.extraer();
-		procesos.push_back(proceso); //push_back se usa para introducir al vector procesos el proceso extraido de la pila
+		procesos.push_back(proceso); //push_back se usa para introducir al vectoProcesos el proceso extraido de la pila
 	}
 	
 	sort(procesos.begin(), procesos.end(), compararPrioridad); //esto ordena el vector que hemos creado en funcion de la prioridad
@@ -122,6 +121,34 @@ int Gestor::ProcesosEnGPU2(){
 int Gestor::ProcesosEnGPU3(){
 	return gpuTR3.getLongitud();
 }
+
+void Gestor::muestraProcesosGPUs0y1(){
+	cout << "GPU 0:" << endl;
+	gpuNormal0.mostrar();
+	cout << endl;
+	cout << "GPU 1:" << endl;
+	gpuNormal1.mostrar();
+	}
+
+void Gestor::muestraProcesosGPUs2y3(){
+	cout << "GPU 2:" << endl;
+	gpuTR2.mostrar();
+	cout << endl;
+	cout << "GPU 3:" << endl;
+	gpuTR3.mostrar();
+	}
+void Gestor::borraProcesosColas(){
+	gpuNormal0.eliminar();
+	gpuNormal1.eliminar();
+	gpuTR2.eliminar();
+	gpuTR3.eliminar();
+	}
+	
+	
+void Gestor::reiniciar(){
+	borraProcesosColas();
+	borraProcesosPila()
+	}
 
 Gestor::~Gestor()
 {	

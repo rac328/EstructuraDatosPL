@@ -79,13 +79,13 @@ int main(int argc, char** argv)
 			gestor.encolarProcesos();
 			break;
 		case 'E':
-			// gestor.muestraProcesosGPUs0y1();
+			gestor.muestraProcesosGPUs0y1();
 			break;
 		case 'F':
-			// gestor.muestraProcesosGPUs2y3();
+			gestor.muestraProcesosGPUs2y3();
 			break;
 		case 'G':
-			// gestor.borraProcesosColas();
+			gestor.borraProcesosColas();
 			break;
 		case 'H':
 			// gestor.enlistarProcesos();
@@ -109,7 +109,7 @@ int main(int argc, char** argv)
 			// gestor.cambiarPrioridadProcesoPorPID();
 			break;
 		case 'O':
-			// gestor.reiniciar();
+			gestor.reiniciar();
 			break;
 		case 'P':
 			//...;

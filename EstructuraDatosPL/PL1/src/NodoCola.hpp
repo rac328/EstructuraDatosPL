@@ -6,7 +6,7 @@ using namespace std;
 class NodoCola
 {
 public:
-    NodoCola(Proceso* v, NodoCola* sig = NULL);
+    NodoCola(Proceso* vp, NodoCola* sig = NULL);
     ~NodoCola();
 
 private:

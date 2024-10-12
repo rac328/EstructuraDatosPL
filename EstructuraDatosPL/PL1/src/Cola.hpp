@@ -7,7 +7,7 @@ public:
 	~Cola();
 	
 	void encolar(Proceso* proceso);
-	int eliminar();
+	void eliminar();
 	void mostrar();
 	int getLongitud();
 	Proceso* verPrimero();
