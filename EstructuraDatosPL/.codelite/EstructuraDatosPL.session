@@ -26,22 +26,22 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Pila.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="6" Name="CurrentLine"/>
+      <int Value="3" Name="FirstVisibleLine"/>
+      <int Value="14" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\src\NodoPila.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="6" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Gestor.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="3" Name="CurrentLine"/>
+      <int Value="19" Name="FirstVisibleLine"/>
+      <int Value="34" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -54,14 +54,70 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\main.cpp" Name="FileName"/>
-      <int Value="3" Name="FirstVisibleLine"/>
-      <int Value="15" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\allocator.h" Name="FileName"/>
+      <int Value="172" Name="FirstVisibleLine"/>
+      <int Value="183" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\new_allocator.h" Name="FileName"/>
+      <int Value="88" Name="FirstVisibleLine"/>
+      <int Value="99" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\basic_string.h" Name="FileName"/>
+      <int Value="628" Name="FirstVisibleLine"/>
+      <int Value="639" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\char_traits.h" Name="FileName"/>
+      <int Value="398" Name="FirstVisibleLine"/>
+      <int Value="409" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\x86_64-w64-mingw32\bits\c++config.h" Name="FileName"/>
+      <int Value="539" Name="FirstVisibleLine"/>
+      <int Value="550" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\basic_string.tcc" Name="FileName"/>
+      <int Value="226" Name="FirstVisibleLine"/>
+      <int Value="237" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\stl_iterator_base_funcs.h" Name="FileName"/>
+      <int Value="140" Name="FirstVisibleLine"/>
+      <int Value="151" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite\mingw64\include\c++\13.2.0\bits\stl_iterator_base_types.h" Name="FileName"/>
+      <int Value="228" Name="FirstVisibleLine"/>
+      <int Value="239" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="27" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>

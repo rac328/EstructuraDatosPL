@@ -66,10 +66,10 @@ int main(int argc, char** argv)
 		switch(opcion) {
 
 		case 'A':
-			// gestor.genera12Procesos();
+			gestor.genera12Procesos();
 			break;
 		case 'B':
-			// gestor.muestraProcesos();
+			gestor.muestraProcesos();
 			break;
 		case 'C':
 			// gestor.borraProcesosPila();

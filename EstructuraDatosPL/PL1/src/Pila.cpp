@@ -28,14 +28,12 @@ Proceso* Pila::cima(){
 	return ultimo->valorProceso ;
 	}
 
-void Pila::mostrar(){
+void Pila::mostrarInfoB(){
 	pNodoP aux = ultimo;
-	cout << "\tEl contenido de la pila es: " << endl;
 	while(aux){
-		aux->valorProceso->getPDI();
+		aux->valorProceso->mostrarInfoBasico();
 		aux = aux -> siguiente;
 		}
-	cout << endl;
 	}
 
 int Pila::getLongitud(){

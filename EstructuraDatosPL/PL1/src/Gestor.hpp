@@ -4,7 +4,7 @@ class Gestor
 public:
 	Gestor();
 	~Gestor();
-	char ProcesosEnPila();
+	int ProcesosEnPila();
 	void ProcesosEnGPU0();
 	void ProcesosEnGPU1();
 	void ProcesosEnGPU2();
@@ -33,5 +33,7 @@ private:
 	int arrayNormal[39];
 	int arrayTReal[100];
 	Pila pila;
+	int contadorPDI;
+	int contadorNombre;
 
 };

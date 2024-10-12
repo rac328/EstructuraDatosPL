@@ -2,10 +2,10 @@
 using namespace std;
 
 Proceso::Proceso(){}
-Proceso::Proceso(int pdi, char nombre[6], bool tipo, bool estado, int prioridad)
+Proceso::Proceso(int pdi, string nombre, bool tipo, bool estado, int prioridad)
 {
-	this->pdi= 300 + rand() % 1000;
-	strcpy(this->nombre, nombre);
+	this->pdi=pdi;
+	this->nombre=nombre;
 	this->tipo= rand() % 2;
 	this->estado=estado;
 	this->prioridad=prioridad;
@@ -31,12 +31,11 @@ bool Proceso::getTipo(){
 	return this->tipo;
 	}
 	
-void Proceso::mostrarInfo(){
-	//no funciona
-	if(tipo)
-		cout << "Proceso normal" << endl;
+void Proceso::mostrarInfoBasico(){
+	if(this->tipo)
+		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "normal" <<" ejecutado por "<<nombre<<endl;
 	else
-		cout << "Proceso en tiempo real" << endl;
+		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "en tiempo real" <<" ejecutado por "<<nombre<<endl;
 	}
 
 Proceso::~Proceso()
