@@ -28,12 +28,10 @@ public:
 	void reiniciar();
 	
 private:
-	int contadorNormal;
-	int contadorTReal;
-	int arrayNormal[39];
-	int arrayTReal[100];
 	Pila pila;
 	int contadorPDI;
 	int contadorNombre;
+	int contadorPrioridadNormal;
+	int contadorPrioridadTR;
 
 };

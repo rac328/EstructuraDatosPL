@@ -7,13 +7,13 @@ Proceso::Proceso(int pdi, string nombre, bool tipo, bool estado, int prioridad)
 {
 	this->pdi=pdi;
 	this->nombre=nombre;
-	this->tipo= rand() % 2;
+	this->tipo=tipo;
 	this->estado=estado;
 	this->prioridad=prioridad;
 }
 
 void Proceso::setPrioridad(int prio){
-	this->prioridad=(prio + 120);
+	this->prioridad=(prio);
 	}
 
 int Proceso::getPDI(){
@@ -34,9 +34,9 @@ bool Proceso::getTipo(){
 	
 void Proceso::mostrarInfoBasico(){
 	if(this->tipo)
-		cout << "El proceso cuyo PDI es " << 300 + this->pdi << " es de tipo " << "normal" <<" ejecutado por "<< nombre << "con prioridad" << this->getPrioridad() << endl;
+		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "normal" <<" ejecutado por "<< this->nombre << " con prioridad " << this->prioridad << endl;
 	else
-		cout << "El proceso cuyo PDI es " << 300 + this->pdi << " es de tipo " << "en tiempo real" <<" ejecutado por "<< nombre<< "con prioridad" << this->getPrioridad() << endl;
+		cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "en tiempo real" <<" ejecutado por "<< this->nombre<< " con prioridad " << this->prioridad << endl;
 	}
 
 Proceso::~Proceso()

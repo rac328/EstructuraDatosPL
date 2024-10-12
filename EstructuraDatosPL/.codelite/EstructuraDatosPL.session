@@ -1,54 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\EstructuraDatosPL.workspace">
-  <int Value="4" Name="m_selectedTab"/>
-  <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\EstructuraDatosPL.workspace" Name="m_workspaceName"/>
+<Session Name="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\EstructuraDatosPL.workspace">
+  <int Value="0" Name="m_selectedTab"/>
+  <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\EstructuraDatosPL.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Gestor.hpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Gestor.cpp" Name="FileName"/>
+      <int Value="21" Name="FirstVisibleLine"/>
+      <int Value="40" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\main.cpp" Name="FileName"/>
+      <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Gestor.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Pila.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="6" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\NodoPila.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Lista.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="17" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -56,8 +21,8 @@
   <SerializedObject Name="m_breakpoints">
     <long Value="1" Name="Count"/>
     <SerializedObject Name="Breakpoint0">
-      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\main.cpp" Name="file"/>
-      <int Value="67" Name="lineno"/>
+      <wxString Value="C:\Users\raulc\Desktop\Clase\Universidad\2Carrera\1Cuatrimestre\EstructurasDeDatos\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Gestor.cpp" Name="file"/>
+      <int Value="37" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>

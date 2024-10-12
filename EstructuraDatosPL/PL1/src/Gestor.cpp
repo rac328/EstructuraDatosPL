@@ -4,12 +4,12 @@
 using namespace std;
 Gestor::Gestor()
 {
-	this->contadorNormal=0;
-	this->contadorTReal=0;
 	this->contadorPDI=1;
 	this->contadorNombre=0;
+	this->contadorPrioridadNormal=-19;
+	this->contadorPrioridadTR=0;
 	//Istanciar las GPUs
-	//Pila pila;
+	Pila pila;
 }
 int Gestor::ProcesosEnPila(){
 	return pila.getLongitud();  
@@ -17,18 +17,44 @@ int Gestor::ProcesosEnPila(){
 	
 void Gestor::genera12Procesos(){
 	int arrayPDI[12];
+	int prioridad;
 	string nombre = "user";
 	string resultado;
 	stringstream sstm;
+	
 	for(int i=0;i<=11;i++){
-		arrayPDI[i] = contadorPDI + 1;
+		arrayPDI[i] = contadorPDI + 300;
 		contadorPDI++;
 		}
+		
 	random_shuffle(arrayPDI,arrayPDI+11);
+	
 	for(int i=0;i<=11;i++){
 		sstm << nombre << contadorNombre;
 		resultado = sstm.str();
-		Proceso* proceso = new Proceso(arrayPDI[i],resultado, rand() % 2, rand() % 2,1);
+		bool tipoProceso = rand() % 2;
+		if(tipoProceso){
+			if(contadorPrioridadNormal < 20){
+				prioridad = 120 + contadorPrioridadNormal;
+				contadorPrioridadNormal++;
+				}
+			else{
+				cout << "No se admiten más procesos normales";
+				prioridad = 120 + contadorPrioridadNormal;
+				}
+			}
+		else{
+			if(contadorPrioridadTR < 101){
+				prioridad = contadorPrioridadTR;
+				contadorPrioridadTR++;
+				}
+			else{
+				cout << "No se admiten más procesos en tiempo real";
+				prioridad = contadorPrioridadTR;
+				}
+			}
+			cout << "me cago en todo" <<endl;
+		Proceso* proceso = new Proceso(arrayPDI[i], resultado, tipoProceso, false, prioridad);
 		pila.insertar(proceso);
 		contadorNombre++;
 		sstm.str("");
@@ -39,7 +65,7 @@ void Gestor::genera12Procesos(){
 void Gestor::muestraProcesos(){
 	pila.mostrarInfoB();
 	}
-	
+
 void Gestor::borraProcesosPila(){
 	while (pila.getLongitud()>0){
 		pila.borrar();
