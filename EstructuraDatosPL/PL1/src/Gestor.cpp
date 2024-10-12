@@ -44,7 +44,7 @@ void Gestor::genera12Procesos(){
 				}
 			}
 		else{
-			if(contadorPrioridadTR < 101){
+			if(contadorPrioridadTR < 100){
 				prioridad = contadorPrioridadTR;
 				contadorPrioridadTR++;
 				}
