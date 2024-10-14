@@ -5,6 +5,8 @@
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
     <VirtualDirectory Name="SourceFiles">
+      <File Name="src/ListaDobleEnlazada.cpp"/>
+      <File Name="src/NodoListaDoble.cpp"/>
       <File Name="src/NodoCola.cpp"/>
       <File Name="src/Cola.cpp"/>
       <File Name="src/Pila.cpp"/>
@@ -14,6 +16,8 @@
       <File Name="src/Proceso.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="HeaderFinder">
+      <File Name="src/ListaDobleEnlazada.hpp"/>
+      <File Name="src/NodoListaDoble.hpp"/>
       <File Name="src/NodoCola.hpp"/>
       <File Name="src/Cola.hpp"/>
       <File Name="src/Pila.hpp"/>

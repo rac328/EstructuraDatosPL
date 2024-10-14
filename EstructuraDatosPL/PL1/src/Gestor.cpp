@@ -147,7 +147,7 @@ void Gestor::borraProcesosColas(){
 	
 void Gestor::reiniciar(){
 	borraProcesosColas();
-	borraProcesosPila()
+	borraProcesosPila();
 	}
 
 Gestor::~Gestor()

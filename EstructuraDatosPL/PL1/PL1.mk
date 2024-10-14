@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=raulc
-Date                   :=10/12/2024
+Date                   :=10/14/2024
 CodeLitePath           :=C:/Users/raulc/Desktop/Programas/codelite-amd64-17.0.0/codelite
 MakeDirCommand         :=mkdir
 LinkerName             :=g++
@@ -64,7 +64,8 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Users\raulc\Desktop\Programas\codelite-amd64-17.0.0\codelite
-Objects0=$(IntermediateDirectory)/src_NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Gestor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Proceso.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Pila.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Cola.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_NodoCola.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_ListaDobleEnlazada.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_NodoListaDoble.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Gestor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Proceso.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Pila.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Cola.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_NodoCola.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) \
+	
 
 
 
@@ -95,6 +96,16 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/src_ListaDobleEnlazada.cpp$(ObjectSuffix): src/ListaDobleEnlazada.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/raulc/Desktop/Clase/Universidad/2Carrera/1Cuatrimestre/EstructurasDeDatos/EstructuraDatosPL/EstructuraDatosPL/PL1/src/ListaDobleEnlazada.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_ListaDobleEnlazada.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_ListaDobleEnlazada.cpp$(PreprocessSuffix): src/ListaDobleEnlazada.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_ListaDobleEnlazada.cpp$(PreprocessSuffix) src/ListaDobleEnlazada.cpp
+
+$(IntermediateDirectory)/src_NodoListaDoble.cpp$(ObjectSuffix): src/NodoListaDoble.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/raulc/Desktop/Clase/Universidad/2Carrera/1Cuatrimestre/EstructurasDeDatos/EstructuraDatosPL/EstructuraDatosPL/PL1/src/NodoListaDoble.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_NodoListaDoble.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_NodoListaDoble.cpp$(PreprocessSuffix): src/NodoListaDoble.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_NodoListaDoble.cpp$(PreprocessSuffix) src/NodoListaDoble.cpp
+
 $(IntermediateDirectory)/src_NodoPila.cpp$(ObjectSuffix): src/NodoPila.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/raulc/Desktop/Clase/Universidad/2Carrera/1Cuatrimestre/EstructurasDeDatos/EstructuraDatosPL/EstructuraDatosPL/PL1/src/NodoPila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_NodoPila.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_NodoPila.cpp$(PreprocessSuffix): src/NodoPila.cpp
