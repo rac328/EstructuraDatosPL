@@ -82,31 +82,24 @@ bool compararPrioridad(Proceso* a, Proceso* b) {
 
 //he buscado como hacer de manera facil lo de ordenar y lo podemos hacer con un vector y std::sort
 void Gestor::encolarProcesos(){
-	vector<Proceso*> procesos;
-	
-	while (pila.getLongitud() > 0){
-		Proceso* proceso = pila.extraer();
-		procesos.push_back(proceso); //push_back se usa para introducir al vectoProcesos el proceso extraido de la pila
-	}
-	
-	sort(procesos.begin(), procesos.end(), compararPrioridad); //esto ordena el vector que hemos creado en funcion de la prioridad
-	
-	for (Proceso* proceso : procesos) {
-		if (proceso->getTipo()){ //esto es que es de tipo normal
-			if (gpuNormal0.getLongitud() <= gpuNormal1.getLongitud()){ //si una cola tiene menos que otra, 
-			//se mete el proceso en la que menos tiene, pero si los dos tienen igual, se mete al primero
-				gpuNormal0.encolar(proceso);
-			}else{
-				gpuNormal1.encolar(proceso);
-			}
-		}else{ //lo mismo para los de tiempo real
-			if(gpuTR2.getLongitud() <= gpuTR3.getLongitud()){
-				gpuTR2.encolar(proceso);
-			}else{
-				gpuTR3.encolar(proceso);
-			}
-		}
-	}
+	while (pila.getLongitud() > 0) {
+        Proceso* proceso = pila.extraer();
+
+        // Si es de tipo normal
+        if (proceso->getTipo()) {
+            if (gpuNormal0.getLongitud() <= gpuNormal1.getLongitud()) {
+                gpuNormal0.encolar(proceso);
+            } else {
+                gpuNormal1.encolar(proceso);
+            }
+        } else { // Si es de tiempo real
+            if (gpuTR2.getLongitud() <= gpuTR3.getLongitud()) {
+                gpuTR2.encolar(proceso);
+            } else {
+                gpuTR3.encolar(proceso);
+            }
+        }
+    }
 }
 
 int Gestor::ProcesosEnGPU0(){

@@ -7,17 +7,37 @@ Cola::Cola()
 }
 void Cola::encolar(Proceso* proceso)
 {
-    pnodoCola nuevo;
-    nuevo = new NodoCola(proceso);
-    if(ultimo)
-        ultimo->siguiente = nuevo;
-		
-    ultimo = nuevo;
-    if(!primero)
+    NodoCola* nuevo = new NodoCola(proceso);
 
+    if (primero == nullptr) {  // Cuando la cola este vacia
+        primero = ultimo = nuevo;
+    } else if (proceso->getPrioridad() < primero->valorProceso->getPrioridad()) {
+        // Si el nuevo tiene mayor prioridad se mete al principio
+        nuevo->siguiente = primero;
         primero = nuevo;
-    longitud++;
+    } else {
+        NodoCola* actual = primero;
+        NodoCola* anterior = nullptr;
+
+        //Se busca donde meter el proceso nuevo
+        while (actual != nullptr && actual->valorProceso->getPrioridad() <= proceso->getPrioridad()) {
+            anterior = actual;
+            actual = actual->siguiente;
+        }
+
+        if (actual == nullptr) {
+            // Si llegó al ultimo, insertar allí
+            ultimo->siguiente = nuevo;
+            ultimo = nuevo;
+			ultimo->siguiente = nullptr;
+        } else {
+            // Insertar en medio
+            anterior->siguiente = nuevo;
+            nuevo->siguiente = actual;
+        }
+    }
 }
+
 void Cola::mostrar()
 {
     pnodoCola aux = primero;
