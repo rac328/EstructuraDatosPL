@@ -26,7 +26,7 @@ void Cola::encolar(Proceso* proceso)
         }
 
         if (actual == nullptr) {
-            // Si llegó al ultimo, insertar allí
+            // Si se llega al ultimo, para y se inserta ahi
             ultimo->siguiente = nuevo;
             ultimo = nuevo;
 			ultimo->siguiente = nullptr;
@@ -36,6 +36,7 @@ void Cola::encolar(Proceso* proceso)
             nuevo->siguiente = actual;
         }
     }
+	longitud++;
 }
 
 void Cola::mostrar()
@@ -65,7 +66,7 @@ void Cola::eliminar(){
 }
 
 int Cola::getLongitud(){
-	return this -> longitud;
+	return this->longitud;
 	}
 
 Proceso* Cola::verPrimero() { return primero->valorProceso; }
