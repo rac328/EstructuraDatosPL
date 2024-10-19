@@ -6,6 +6,7 @@ NodoListaDoble::NodoListaDoble(Proceso* vp, NodoListaDoble* listasiguiente, Nodo
 	valorProceso = vp;
 	listnodsig = listasiguiente;
 }
+NodoListaDoble::NodoListaDoble(){}
 
 NodoListaDoble::~NodoListaDoble()
 {

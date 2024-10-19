@@ -20,28 +20,37 @@ void ListaDobleEnlazada::insertar(Proceso* proceso){
 			primero = nuevo;
 	}
 	else{
-		NodoListaDoble* actual = primero;
-
+		NodoListaDoble* aux = this->primero;
+		NodoListaDoble* actual = aux;
         //Se busca donde meter el proceso nuevo
 		//Arreglar porque no furula, se mete en un bucle infinito
         while (actual != nullptr && (actual->valorProceso->getPrioridad() <= proceso->getPrioridad())) {
-			actual->listnodant = actual;
+			//actual->listnodant = actual;
             actual = actual->listnodsig;
         }
 
         if (actual == nullptr) {
             // Si se llega al ultimo, para y se inserta ahi
             ultimo->listnodsig = nuevo;
+			NodoListaDoble* aux = ultimo;
             ultimo = nuevo;
+			ultimo->listnodant= aux;		
 			ultimo->listnodsig = nullptr;
         }
 		else {
             // Insertar en medio
-			nuevo->listnodant = actual->listnodant;
+			nuevo->listnodsig = actual;
+			actual->listnodant->listnodsig = nuevo;
+			nuevo->listnodant = actual->listnodant->listnodsig;
+			actual->listnodant = nuevo;
+			/* 
+			 nuevo->listnodant = actual->listnodant;
 			//actual->listnodant->listnodsig = nuevo;
 			nuevo->listnodant->listnodsig = nuevo;
 			actual->listnodant = nuevo;
             nuevo->listnodsig = actual;
+			 */
+			
         }
     }
 	longitud++;

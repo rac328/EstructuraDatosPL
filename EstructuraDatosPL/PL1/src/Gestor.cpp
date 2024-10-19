@@ -154,22 +154,27 @@ void Gestor::reiniciar(){
 
 void Gestor::enlistarProcesos(){
 
-	for(int i=0; i<=gpuNormal0.getLongitud(); i++){
+	/*for(int i=0; i<=gpuNormal0.getLongitud(); i++){
 		Proceso* aux0Normal = gpuNormal0.devolverPrimero();
 		aux0Normal->setEstado(true);
 		ListNormal.insertar(aux0Normal);
-		}
-	for(int i=0; i<=gpuNormal1.getLongitud(); i++){
+		}*/
+	while(gpuNormal0.getLongitud() !=0){
+		Proceso* aux0Normal = gpuNormal0.devolverPrimero();
+		aux0Normal->setEstado(true);
+		ListNormal.insertar(aux0Normal);}
+		cout << gpuNormal0.getLongitud() <<endl;
+	while(gpuNormal1.getLongitud() !=0){
 		Proceso* aux1Normal = gpuNormal1.devolverPrimero();
 		aux1Normal->setEstado(true);
 		ListNormal.insertar(aux1Normal);
 		}
-	for(int i=0; i<=gpuTR2.getLongitud(); i++){
+	while(gpuTR2.getLongitud() !=0){
 		Proceso* aux2TReal = gpuTR2.devolverPrimero();
 		aux2TReal->setEstado(true);
 		ListTReal.insertar(aux2TReal);
 	}
-	for(int i=0; i<=gpuTR3.getLongitud(); i++){
+	while(gpuTR3.getLongitud() !=0){
 		Proceso* aux3TReal = gpuTR3.devolverPrimero();
 		aux3TReal->setEstado(true);
 		ListTReal.insertar(aux3TReal);
