@@ -1,7 +1,7 @@
 #include "Gestor.hpp"
 #include <algorithm>
 #include <sstream>
-#include <vector>
+
 using namespace std;
 Gestor::Gestor()
 {
@@ -13,6 +13,7 @@ Gestor::Gestor()
 	Pila pila;
 	Cola gpuNormal0, gpuNormal1;
 	Cola gpuTR2, gpuTR3;
+	ListaDobleEnlazada ListNormal, ListTReal;
 }
 int Gestor::ProcesosEnPila(){
 	return pila.getLongitud();  
@@ -82,6 +83,7 @@ bool compararPrioridad(Proceso* a, Proceso* b) {
 
 //he buscado como hacer de manera facil lo de ordenar y lo podemos hacer con un vector y std::sort
 void Gestor::encolarProcesos(){
+	
 	while (pila.getLongitud() > 0) {
         Proceso* proceso = pila.extraer();
 
@@ -114,6 +116,12 @@ int Gestor::ProcesosEnGPU2(){
 int Gestor::ProcesosEnGPU3(){
 	return gpuTR3.getLongitud();
 }
+int Gestor::ProcesosEnListaNormal(){
+	return ListNormal.getLongitud();
+	}
+int Gestor::ProcesosEnListaTiempoReal(){
+	return ListTReal.getLongitud();
+	}
 
 void Gestor::muestraProcesosGPUs0y1(){
 	cout << "GPU 0:" << endl;
@@ -141,8 +149,41 @@ void Gestor::borraProcesosColas(){
 void Gestor::reiniciar(){
 	borraProcesosColas();
 	borraProcesosPila();
+	//falta eliminar procesos de las listas
 	}
 
+void Gestor::enlistarProcesos(){
+
+	for(int i=0; i<=gpuNormal0.getLongitud(); i++){
+		Proceso* aux0Normal = gpuNormal0.devolverPrimero();
+		aux0Normal->setEstado(true);
+		ListNormal.insertar(aux0Normal);
+		}
+	for(int i=0; i<=gpuNormal1.getLongitud(); i++){
+		Proceso* aux1Normal = gpuNormal1.devolverPrimero();
+		aux1Normal->setEstado(true);
+		ListNormal.insertar(aux1Normal);
+		}
+	for(int i=0; i<=gpuTR2.getLongitud(); i++){
+		Proceso* aux2TReal = gpuTR2.devolverPrimero();
+		aux2TReal->setEstado(true);
+		ListTReal.insertar(aux2TReal);
+	}
+	for(int i=0; i<=gpuTR3.getLongitud(); i++){
+		Proceso* aux3TReal = gpuTR3.devolverPrimero();
+		aux3TReal->setEstado(true);
+		ListTReal.insertar(aux3TReal);
+	}
+}
+
+void Gestor::muestraProcesosNormal(){
+	ListNormal.mostrarInfoB();
+	}
+
+void Gestor::muestraProcesosTiempoReal(){
+	ListTReal.mostrarInfoB();
+	}
+	
 Gestor::~Gestor()
 {	
 }

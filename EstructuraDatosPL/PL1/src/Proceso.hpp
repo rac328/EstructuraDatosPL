@@ -18,8 +18,9 @@ public:
 	bool getEstado();
 	bool getTipo();
 	int getPrioridad();
-	void setPrioridad(int prio);
 	int getPDI();
+	void setPrioridad(int prio);
+	void setEstado(bool est);
 	void mostrarInfoBasico();
 	void mostrarInfoEstado();
 	

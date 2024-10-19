@@ -14,5 +14,5 @@ public:
 	
 private:
 	int longitud;
-	nodoList siguiente, ultimo;
+	nodoList primero, ultimo;
 };

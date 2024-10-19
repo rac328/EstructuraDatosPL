@@ -11,6 +11,7 @@ public:
 	void mostrar();
 	int getLongitud();
 	Proceso* verPrimero();
+	Proceso* devolverPrimero();
 
 private:
 	pnodoCola primero, ultimo;

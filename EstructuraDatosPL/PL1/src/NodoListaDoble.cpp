@@ -1,11 +1,10 @@
 #include "NodoListaDoble.hpp"
 
-NodoListaDoble::NodoListaDoble(NodoListaDoble* listanterior, Proceso* vp, NodoListaDoble* listasiguiente, int index)
+NodoListaDoble::NodoListaDoble(Proceso* vp, NodoListaDoble* listasiguiente, NodoListaDoble* listanterior)
 {
+	listnodant = listanterior;
 	valorProceso = vp;
-	indice = index;
-	listsig = listasiguiente;
-	listant = listanterior;
+	listnodsig = listasiguiente;
 }
 
 NodoListaDoble::~NodoListaDoble()

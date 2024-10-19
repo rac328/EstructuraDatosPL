@@ -3,13 +3,13 @@
 class NodoListaDoble
 {
 public:
-	NodoListaDoble(NodoListaDoble* listantnodo = NULL, Proceso* vp, NodoListaDoble* listsignodo = NULL, int index);
+	NodoListaDoble(Proceso* vp, NodoListaDoble* listsignodo = NULL, NodoListaDoble* listantnodo = NULL);
 	~NodoListaDoble();
 private:
+	NodoListaDoble* listnodant;
 	Proceso* valorProceso;
-	NodoListaDoble* listsig;
-	NodoListaDoble* listant;
-	int indice;
+	NodoListaDoble* listnodsig;
+	
 	friend class ListaDobleEnlazada;
 };
 

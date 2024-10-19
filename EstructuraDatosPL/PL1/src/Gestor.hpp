@@ -1,5 +1,6 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
+#include "ListaDobleEnlazada.hpp"
 class Gestor
 {
 public:
@@ -10,8 +11,8 @@ public:
 	int ProcesosEnGPU1();
 	int ProcesosEnGPU2();
 	int ProcesosEnGPU3();
-	void ProcesosEnListaNormal();
-	void ProcesosEnListaTiempoReal();
+	int ProcesosEnListaNormal();
+	int ProcesosEnListaTiempoReal();
 	void ProcesosEnArbol();
 	void genera12Procesos();
 	void muestraProcesos();
@@ -33,6 +34,7 @@ private:
 	Pila pila;
 	Cola gpuNormal0, gpuNormal1;
 	Cola gpuTR2, gpuTR3;
+	ListaDobleEnlazada ListNormal, ListTReal;
 	int contadorPDI;
 	int contadorNombre;
 	int contadorPrioridadNormal;
