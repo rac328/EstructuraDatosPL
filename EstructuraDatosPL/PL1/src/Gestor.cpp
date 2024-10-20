@@ -153,12 +153,6 @@ void Gestor::reiniciar(){
 	}
 
 void Gestor::enlistarProcesos(){
-
-	/*for(int i=0; i<=gpuNormal0.getLongitud(); i++){
-		Proceso* aux0Normal = gpuNormal0.devolverPrimero();
-		aux0Normal->setEstado(true);
-		ListNormal.insertar(aux0Normal);
-		}*/
 	while(gpuNormal0.getLongitud() !=0){
 		Proceso* aux0Normal = gpuNormal0.devolverPrimero();
 		aux0Normal->setEstado(true);
@@ -182,10 +176,12 @@ void Gestor::enlistarProcesos(){
 }
 
 void Gestor::muestraProcesosNormal(){
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t" << "\tPrioridad" << endl;
 	ListNormal.mostrarInfoB();
 	}
 
 void Gestor::muestraProcesosTiempoReal(){
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t" << "Prioridad" << endl;
 	ListTReal.mostrarInfoB();
 	}
 	

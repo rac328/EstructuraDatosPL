@@ -44,12 +44,12 @@ void Proceso::mostrarInfoBasico(){
 		}
 	}
 void Proceso::mostrarInfoEstado(){ //ESTA FUNCIÓN HAY QUE CAMBIARLA ENTERA PARA QUE SALGA EN COLUMNAS
-	if(estado){
+	if(this->estado){
 		if(this->tipo){
-			cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "normal, esta en ejecucion y su prioridad es: " << this->prioridad << endl;
+			cout << this->pdi << "\t" << this->nombre << "\t" << "normal" << "\t" << "ejecucion" << "\t" << this->prioridad << endl;
 		}
 		else{
-			cout << "El proceso cuyo PDI es " << this->pdi << " es de tipo " << "en tiempo real, esta en ejecucion y su prioridad es: " << this->prioridad << endl;
+			cout << this->pdi << "\t" << this->nombre << "\t" << "normal" << "\t" << "ejecucion" << "\t" << this->prioridad << endl;
 		}
 		}
 	else{
