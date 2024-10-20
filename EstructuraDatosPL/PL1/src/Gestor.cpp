@@ -184,7 +184,32 @@ void Gestor::muestraProcesosTiempoReal(){
 	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t" << "Prioridad" << endl;
 	ListTReal.mostrarInfoB();
 	}
+
+void Gestor::buscarProcesos(){
+	cout <<"Proceso con menor prioridad de la lista de procesos normales: " << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
+	ListNormal.menor();
+	cout << endl;
+	cout << "Proceso con menor prioridad de la lista de procesosde tiempo real: " << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t" << "   Prioridad" << endl;
+	ListTReal.menor();
+}
+
+void Gestor::buscarProcesoPorNombreUsuario(){
+	string nombreUsuario;
+	cout << "Introduzca el nombre de usuario del cual desea buscar los procesos: ";
+	cin >>nombreUsuario;
 	
+	cout << "Los procesos asociados al nombre de usuario " << nombreUsuario << " en la lista normal son: " << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
+	ListNormal.buscarPorUsuario(nombreUsuario);
+	cout << endl;
+	
+	cout << "Los procesos asociados al nombre de usuario " << nombreUsuario << " en la lista de tiempo real son: " << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
+	ListTReal.buscarPorUsuario(nombreUsuario);
+	cout << endl;
+}
 Gestor::~Gestor()
 {	
 }

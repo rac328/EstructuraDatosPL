@@ -25,7 +25,7 @@ public:
 	void muestraProcesosNormal();
 	void muestraProcesosTiempoReal();
 	void buscarProcesos();
-	Proceso buscarProcesoPorNombreUsuario();
+	void buscarProcesoPorNombreUsuario();
 	void eliminarProcesoPorPID();
 	void cambiarPrioridadProcesoPorPID();
 	void reiniciar();

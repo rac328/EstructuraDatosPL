@@ -11,6 +11,8 @@ public:
 	void borrar();
 	void mostrarInfoB();
 	int getLongitud();
+	void menor();
+	void buscarPorUsuario(string);
 	
 private:
 	int longitud;

@@ -14,7 +14,7 @@ public:
 	//si el estado es TRUE, el proceso está corriendo, sino, está parado
 	Proceso(int pdi, string nombre, bool tipo, bool estado, int prioridad);
 	~Proceso();
-	string getNombreUsuario;
+	string getNombreUsuario();
 	bool getEstado();
 	bool getTipo();
 	int getPrioridad();

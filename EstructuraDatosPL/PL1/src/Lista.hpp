@@ -11,6 +11,7 @@ public:
 	Proceso buscarProceso();
 	Proceso finalizarProceso();
 	void cambiarPrioridad();
+	Proceso menor();
 	//faltan más métodos
 	
 

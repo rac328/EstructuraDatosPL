@@ -19,6 +19,10 @@ void Proceso::setEstado(bool est){
 	this->estado=est;
 	}
 
+string Proceso::getNombreUsuario() {
+	return this->nombre;
+}
+
 int Proceso::getPDI(){
 	return this->pdi;
 	}
