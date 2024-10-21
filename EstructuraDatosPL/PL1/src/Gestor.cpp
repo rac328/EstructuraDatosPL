@@ -210,6 +210,26 @@ void Gestor::buscarProcesoPorNombreUsuario(){
 	ListTReal.buscarPorUsuario(nombreUsuario);
 	cout << endl;
 }
+
+void Gestor::eliminarProcesoPorPID(){
+	int PID;
+	cout << "Introduzca el PID que desea eliminar de las listas y introducir de nuevo a la pila: ";
+	cin >> PID;
+	
+	cout << "Lista normal: " << endl;
+	ListNormal.buscarPorPID(PID, pila);
+	cout << endl;
+	cout << endl;
+	
+	cout << "Lista de tiempo real: " << endl;
+	ListTReal.buscarPorPID(PID, pila);
+	cout << endl;
+}
+
+/*void Gestor::cambiarPrioridadProcesoPorPID(){
+	int PID;
+	cout << "Introduce 
+}*/
 Gestor::~Gestor()
 {	
 }

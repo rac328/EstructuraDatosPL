@@ -1,4 +1,4 @@
-
+#include "Pila.hpp"
 #include "ListaDobleEnlazada.hpp"
 
 ListaDobleEnlazada::ListaDobleEnlazada()
@@ -107,6 +107,70 @@ void ListaDobleEnlazada::buscarPorUsuario( string nombreUsuario){
 		cout<< "No hay ningun proceso asociado al nombre de usuario proporcionado" << endl;
 	}
 }
+
+	
+void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
+	NodoListaDoble* proceso = primero;
+	NodoListaDoble* sig;
+	bool encontrado = false;
+	
+	while (proceso != nullptr){
+		sig = proceso->listnodsig;
+		
+		cout << "Buscando " << PID << " en " << proceso->valorProceso->getPDI() << "\n";
+		if (proceso->valorProceso->getPDI() == PID){
+			
+			//primero para si es el primero
+			if (proceso == primero){
+				cout << "Encontrado en primero !!!!\n";
+				primero = proceso->listnodsig;
+				
+				if (primero != nullptr){ //por si acaso se vacia la lista para que no lo haga
+					primero->listnodant = nullptr;
+				}
+			}else{ // ahora para cuando esta en el medio
+			//cout << "Encontrado en medio. Anterior: " << proceso->listnodant->valorProceso->getPDI() << " Pasa a " << proceso->listnodsig->valorProceso->getPDI();
+				proceso->listnodant->listnodsig = proceso->listnodsig; //el lugar del proceso que se 
+				//elimina pasa a ser del proceso con la posicion siguiente				
+				}
+			if (proceso == ultimo){
+				ultimo = proceso->listnodant;
+			}
+			
+			encontrado = true;
+			proceso->valorProceso->setEstado(false);
+			pila.insertar(proceso->valorProceso);
+			longitud--;
+			delete proceso;
+			cout << "El proceso con PID " << PID << " ha sido encontrado en la lista y ha sido eliminado de esta e introducido en la pila.\n";
+			break;
+		}
+		proceso = sig;
+	}
+	if (encontrado == false){
+		cout << "No se ha encontrado ningun proceso con dicho PID en la lista.";
+	}
+}
+
+void ListaDobleEnlazada::cambiarPrioridadListaNormal(int PIDbuscado, int prioridad){
+	/*pasos:	primero comparar si la prioridad es valida (-19 - 19).
+	 * 			segundo ver si alguno de la lista tiene esa prioridad
+si es que si que salte un mensaje con otro cin, 
+ * si es que no: 
+	 * 			tercero ver si esta el PDI en la lista normal
+	 * 			cuarto sustituir la prioridad del proceso por la nueva 
+	 
+	NodoListaDoble* proceso = primero;
+	proceso->valorProceso->setPrioridad(NULL);
+	bool encontrado = false;
+	if (prioridad < 101 
+	while (proceso != nullptr){
+		if (proceso->valorProceso->getPrioridad() == prioridad){
+			cout << "La prioridad introducida ya existe
+		}
+	}*/
+}
+//repetir el anterior para las listas de tiempo real pero comparando con otras prioridades
 ListaDobleEnlazada::~ListaDobleEnlazada()
 {
 }

@@ -13,6 +13,9 @@ public:
 	int getLongitud();
 	void menor();
 	void buscarPorUsuario(string);
+	void buscarPorPID(int, Pila&);
+	void cambiarPrioridadListaNormal(int, int);
+	void cambiarPrioridadListaTReal(int, int);
 	
 private:
 	int longitud;

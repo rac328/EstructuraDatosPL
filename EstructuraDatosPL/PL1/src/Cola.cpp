@@ -37,7 +37,7 @@ void Cola::encolar(Proceso* proceso)
 			}
 		}
 		longitud++;
-		//}
+	
 }
 
 void Cola::mostrar()
