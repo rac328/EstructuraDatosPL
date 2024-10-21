@@ -34,7 +34,7 @@ void Gestor::genera12Procesos(){
 	random_shuffle(arrayPDI,arrayPDI+11);
 	
 	for(int i=0;i<=11;i++){
-		sstm << nombre << contadorNombre;
+		sstm << nombre << rand() % 4;
 		resultado = sstm.str();
 		bool tipoProceso = rand() % 2;
 		if(tipoProceso){

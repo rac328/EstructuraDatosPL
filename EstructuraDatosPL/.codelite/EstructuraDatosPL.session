@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\EstructuraDatosPL.workspace">
-  <int Value="0" Name="m_selectedTab"/>
+  <int Value="3" Name="m_selectedTab"/>
   <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\EstructuraDatosPL.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\main.cpp" Name="FileName"/>
-      <int Value="72" Name="FirstVisibleLine"/>
-      <int Value="102" Name="CurrentLine"/>
+      <int Value="54" Name="FirstVisibleLine"/>
+      <int Value="69" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Gestor.cpp" Name="FileName"/>
+      <int Value="90" Name="FirstVisibleLine"/>
+      <int Value="104" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.cpp" Name="FileName"/>
+      <int Value="25" Name="FirstVisibleLine"/>
+      <int Value="39" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\ListaDobleEnlazada.cpp" Name="FileName"/>
+      <int Value="84" Name="FirstVisibleLine"/>
+      <int Value="98" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -59,7 +80,7 @@
       <bool Value="1" Name="is_enabled"/>
       <long Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
-      <int Value="1" Name="origin"/>
+      <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint3">
       <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.cpp" Name="file"/>
@@ -75,7 +96,7 @@
       <bool Value="1" Name="is_enabled"/>
       <long Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
-      <int Value="1" Name="origin"/>
+      <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint4">
       <wxString Value="C:\UNI\24-25\primer_cuatri\estructura_de_datos\PL\EstructuraDatosPL\EstructuraDatosPL\PL1\src\Proceso.cpp" Name="file"/>
