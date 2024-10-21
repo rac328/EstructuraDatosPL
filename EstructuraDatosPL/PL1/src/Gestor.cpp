@@ -226,10 +226,11 @@ void Gestor::eliminarProcesoPorPID(){
 	cout << endl;
 }
 
-/*void Gestor::cambiarPrioridadProcesoPorPID(){
-	int PID;
-	cout << "Introduce 
-}*/
+void Gestor::cambiarPrioridadProcesoPorPID(){
+	//buscar si el proceso con ese PID esta en alguna lista.
+	//si está, pedirle una prioridad valida para la lista en la que se encuentre
+	//reordenar la lista con la nueva prioridad
+}
 Gestor::~Gestor()
 {	
 }

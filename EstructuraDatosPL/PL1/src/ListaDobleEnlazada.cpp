@@ -152,25 +152,7 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 	}
 }
 
-void ListaDobleEnlazada::cambiarPrioridadListaNormal(int PIDbuscado, int prioridad){
-	/*pasos:	primero comparar si la prioridad es valida (-19 - 19).
-	 * 			segundo ver si alguno de la lista tiene esa prioridad
-si es que si que salte un mensaje con otro cin, 
- * si es que no: 
-	 * 			tercero ver si esta el PDI en la lista normal
-	 * 			cuarto sustituir la prioridad del proceso por la nueva 
-	 
-	NodoListaDoble* proceso = primero;
-	proceso->valorProceso->setPrioridad(NULL);
-	bool encontrado = false;
-	if (prioridad < 101 
-	while (proceso != nullptr){
-		if (proceso->valorProceso->getPrioridad() == prioridad){
-			cout << "La prioridad introducida ya existe
-		}
-	}*/
-}
-//repetir el anterior para las listas de tiempo real pero comparando con otras prioridades
+
 ListaDobleEnlazada::~ListaDobleEnlazada()
 {
 }
