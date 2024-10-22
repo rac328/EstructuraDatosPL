@@ -117,12 +117,12 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 	while (proceso != nullptr){
 		sig = proceso->listnodsig;
 		
-		cout << "Buscando " << PID << " en " << proceso->valorProceso->getPDI() << "\n";
+		//cout << "Buscando " << PID << " en " << proceso->valorProceso->getPDI() << "\n";
 		if (proceso->valorProceso->getPDI() == PID){
 			
 			//primero para si es el primero
 			if (proceso == primero){
-				cout << "Encontrado en primero !!!!\n";
+				//cout << "Encontrado en primero !!!!\n";
 				primero = proceso->listnodsig;
 				
 				if (primero != nullptr){ //por si acaso se vacia la lista para que no lo haga
