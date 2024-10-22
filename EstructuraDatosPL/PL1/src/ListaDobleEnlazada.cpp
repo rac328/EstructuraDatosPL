@@ -111,41 +111,43 @@ void ListaDobleEnlazada::buscarPorUsuario( string nombreUsuario){
 	
 void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 	NodoListaDoble* proceso = primero;
-	NodoListaDoble* sig;
+	NodoListaDoble* sig = primero;
 	bool encontrado = false;
 	
-	while (proceso != nullptr){
-		sig = proceso->listnodsig;
+	while (sig != nullptr){
 		
+		if (primero == nullptr){ //por si acaso se vacia la lista para que no lo haga
+			cout << "No se puede buscar, la lista esta vacia." << endl;
+			break;
+		}
 		//cout << "Buscando " << PID << " en " << proceso->valorProceso->getPDI() << "\n";
-		if (proceso->valorProceso->getPDI() == PID){
+		if (sig->valorProceso->getPDI() == PID){
 			
 			//primero para si es el primero
-			if (proceso == primero){
+			if (sig == primero){
 				//cout << "Encontrado en primero !!!!\n";
-				primero = proceso->listnodsig;
-				
-				if (primero != nullptr){ //por si acaso se vacia la lista para que no lo haga
-					primero->listnodant = nullptr;
+				primero = sig->listnodsig;
+			}
+			else{ // ahora para cuando esta en el medio
+			//cout << "Encontrado en medio. Anterior: " << sig->listnodant->valorProceso->getPDI() << " Pasa a " << proceso->listnodsig->valorProceso->getPDI();
+				sig->listnodant->listnodsig = sig->listnodsig; //el lugar del proceso que se 
+				//elimina pasa a ser del proceso con la posicion siguiente
+				sig->listnodsig->listnodant = sig->listnodant;
 				}
-			}else{ // ahora para cuando esta en el medio
-			//cout << "Encontrado en medio. Anterior: " << proceso->listnodant->valorProceso->getPDI() << " Pasa a " << proceso->listnodsig->valorProceso->getPDI();
-				proceso->listnodant->listnodsig = proceso->listnodsig; //el lugar del proceso que se 
-				//elimina pasa a ser del proceso con la posicion siguiente				
-				}
-			if (proceso == ultimo){
-				ultimo = proceso->listnodant;
+			if (sig == ultimo){
+				ultimo = sig->listnodant;
 			}
 			
 			encontrado = true;
-			proceso->valorProceso->setEstado(false);
-			pila.insertar(proceso->valorProceso);
+			sig->valorProceso->setEstado(false);
+			pila.insertar(sig->valorProceso);
 			longitud--;
-			delete proceso;
+			delete sig;
 			cout << "El proceso con PID " << PID << " ha sido encontrado en la lista y ha sido eliminado de esta e introducido en la pila.\n";
 			break;
 		}
-		proceso = sig;
+		sig = sig->listnodsig;
+		//proceso = sig;
 	}
 	if (encontrado == false){
 		cout << "No se ha encontrado ningun proceso con dicho PID en la lista.";
