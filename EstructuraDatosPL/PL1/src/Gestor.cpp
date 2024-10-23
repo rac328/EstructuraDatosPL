@@ -191,7 +191,7 @@ void Gestor::buscarProcesos(){
 	ListNormal.menor();
 	cout << endl;
 	cout << "Proceso con menor prioridad de la lista de procesosde tiempo real: " << endl;
-	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t" << "   Prioridad" << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "\t" << "Estado" << "\t" << "Prioridad" << endl;
 	ListTReal.menor();
 }
 
@@ -206,7 +206,7 @@ void Gestor::buscarProcesoPorNombreUsuario(){
 	cout << endl;
 	
 	cout << "Los procesos asociados al nombre de usuario " << nombreUsuario << " en la lista de tiempo real son: " << endl;
-	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
 	ListTReal.buscarPorUsuario(nombreUsuario);
 	cout << endl;
 }
@@ -231,6 +231,7 @@ void Gestor::cambiarPrioridadProcesoPorPID(){
 	//si está, pedirle una prioridad valida para la lista en la que se encuentre
 	//reordenar la lista con la nueva prioridad
 }
+
 Gestor::~Gestor()
 {	
 }
