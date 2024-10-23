@@ -147,7 +147,6 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 			break;
 		}
 		sig = sig->listnodsig;
-		//proceso = sig;
 	}
 	
 	if (encontrado == false){
