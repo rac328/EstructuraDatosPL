@@ -75,6 +75,11 @@ void Gestor::borraProcesosPila(){
 	}
 }
 
+void Gestor::borrarListas(){
+	ListNormal.borrarLista();
+	ListTReal.borrarLista();
+	}
+
 
 bool compararPrioridad(Proceso* a, Proceso* b) {
     return a->getPrioridad() < b->getPrioridad(); // Ordena de menor a mayor prioridad
@@ -149,6 +154,8 @@ void Gestor::borraProcesosColas(){
 void Gestor::reiniciar(){
 	borraProcesosColas();
 	borraProcesosPila();
+	borrarListas();
+	
 	//falta eliminar procesos de las listas
 	}
 
@@ -201,12 +208,12 @@ void Gestor::buscarProcesoPorNombreUsuario(){
 	cin >>nombreUsuario;
 	
 	cout << "Los procesos asociados al nombre de usuario " << nombreUsuario << " en la lista normal son: " << endl;
-	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "Estado" << "\t" << "\t" << "Prioridad" << endl;
 	ListNormal.buscarPorUsuario(nombreUsuario);
 	cout << endl;
 	
 	cout << "Los procesos asociados al nombre de usuario " << nombreUsuario << " en la lista de tiempo real son: " << endl;
-	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "\t" << "Estado" << "\t"  << "   Prioridad" << endl;
+	cout << "PDI" << "\t" << "Usuario" << "\t" << "Tipo" << "\t" << "\t" << "Estado" << "\t" << "\t" << "Prioridad" << endl;
 	ListTReal.buscarPorUsuario(nombreUsuario);
 	cout << endl;
 }
@@ -217,12 +224,12 @@ void Gestor::eliminarProcesoPorPID(){
 	cin >> PID;
 	
 	cout << "Lista normal: " << endl;
-	ListNormal.buscarPorPID(PID, pila);
+	ListNormal.eliminarPorPID(PID, pila);
 	cout << endl;
 	cout << endl;
 	
 	cout << "Lista de tiempo real: " << endl;
-	ListTReal.buscarPorPID(PID, pila);
+	ListTReal.eliminarPorPID(PID, pila);
 	cout << endl;
 }
 

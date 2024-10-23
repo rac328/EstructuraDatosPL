@@ -6,14 +6,13 @@ public:
 	ListaDobleEnlazada();
 	~ListaDobleEnlazada();
 	void insertar(Proceso* proceso);
-	Proceso* extraer();
-	Proceso* cima();
-	void borrar();
 	void mostrarInfoB();
 	int getLongitud();
 	void menor();
 	void buscarPorUsuario(string);
-	void buscarPorPID(int, Pila&);
+	void eliminarPorPID(int, Pila&);
+	bool buscarPorPDI(int);
+	void borrarLista();
 	
 private:
 	int longitud;

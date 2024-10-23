@@ -109,7 +109,7 @@ void ListaDobleEnlazada::buscarPorUsuario(string nombreUsuario){
 }
 
 	
-void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
+void ListaDobleEnlazada::eliminarPorPID(int PID, Pila& pila){
 	NodoListaDoble* sig = primero;
 	bool encontrado = false;
 	
@@ -136,13 +136,16 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 				}				
 			}
 			if (sig == ultimo){
+				ultimo->listnodant = nullptr; //Por seguridad
 				ultimo = sig->listnodant;
 			}
 			encontrado = true;
-			sig->valorProceso->setEstado(false);
+			sig->valorProceso->setEstado(false); //Su estado se cambia ya que vuelve a la pila y no se encuentra en ejecución
 			pila.insertar(sig->valorProceso);
-			longitud--;
-			delete sig;
+			longitud--; //se resta el nodo al conjunto de la lista
+			sig->listnodsig = nullptr; //Por seguridad
+			sig->listnodant = nullptr; //Por seguridad
+			delete sig; //Eliminamos el nodo en cuestión
 			cout << "El proceso con PID " << PID << " ha sido encontrado en la lista y ha sido eliminado de esta e introducido en la pila.\n";
 			break;
 		}
@@ -154,8 +157,51 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 	}
 }
 
+void ListaDobleEnlazada::borrarLista(){
+	nodoList aux;
+	while(ultimo){
+		aux = primero;
+		aux->listnodant = nullptr;
+		primero = primero->listnodsig;
+		aux->listnodsig = nullptr;
+		delete aux;
+		}
+	}
+
+bool ListaDobleEnlazada::buscarPorPDI(int pdi){
+	NodoListaDoble* sig = primero;
+	bool encontrado = false;
+	
+	while (sig != nullptr){
+		
+		if (primero == nullptr){ //por si acaso se vacia la lista para que no lo haga
+			cout << "No se puede buscar, la lista esta vacia." << endl;
+			break;
+		}
+		//Si el nodo contiene el proceso correcto se cambia el valor de encontrado a true, 
+		//en caso contrario el bucle acabaría con el proceso no encontrado
+		if (sig->valorProceso->getPDI() == pdi){
+			encontrado = true;
+			break;
+		}
+		sig = sig->listnodsig;
+	}
+	
+	if (encontrado == false){
+		cout << "No se ha encontrado ningun proceso con dicho PID en la lista.";
+	}
+	return encontrado;
+	}
 
 ListaDobleEnlazada::~ListaDobleEnlazada()
 {
+	nodoList aux;
+	while(ultimo){
+		aux = primero;
+		aux->listnodant = nullptr;
+		primero = primero->listnodsig;
+		aux->listnodsig = nullptr;
+		delete aux;
+		}
 }
 
