@@ -93,7 +93,7 @@ void ListaDobleEnlazada::menor(){
 	menorProceso->mostrarInfoEstado();
 }	
 
-void ListaDobleEnlazada::buscarPorUsuario( string nombreUsuario){
+void ListaDobleEnlazada::buscarPorUsuario(string nombreUsuario){
 	NodoListaDoble* proceso = primero;
 	bool encontrado = false;
 	while (proceso != nullptr){
@@ -110,7 +110,6 @@ void ListaDobleEnlazada::buscarPorUsuario( string nombreUsuario){
 
 	
 void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
-	NodoListaDoble* proceso = primero;
 	NodoListaDoble* sig = primero;
 	bool encontrado = false;
 	
@@ -127,17 +126,18 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 			if (sig == primero){
 				//cout << "Encontrado en primero !!!!\n";
 				primero = sig->listnodsig;
-			}
-			else{ // ahora para cuando esta en el medio
+			}else{
+				 // ahora para cuando esta en el medio
 			//cout << "Encontrado en medio. Anterior: " << sig->listnodant->valorProceso->getPDI() << " Pasa a " << proceso->listnodsig->valorProceso->getPDI();
 				sig->listnodant->listnodsig = sig->listnodsig; //el lugar del proceso que se 
 				//elimina pasa a ser del proceso con la posicion siguiente
-				sig->listnodsig->listnodant = sig->listnodant;
-				}
+				if (sig->listnodsig != nullptr){
+					sig->listnodsig->listnodant = sig->listnodant;
+				}				
+			}
 			if (sig == ultimo){
 				ultimo = sig->listnodant;
 			}
-			
 			encontrado = true;
 			sig->valorProceso->setEstado(false);
 			pila.insertar(sig->valorProceso);
@@ -149,6 +149,7 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 		sig = sig->listnodsig;
 		//proceso = sig;
 	}
+	
 	if (encontrado == false){
 		cout << "No se ha encontrado ningun proceso con dicho PID en la lista.";
 	}

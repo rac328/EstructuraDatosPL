@@ -53,7 +53,7 @@ void Proceso::mostrarInfoEstado(){ //ESTA FUNCIÓN HAY QUE CAMBIARLA ENTERA PARA
 			cout << this->pdi << "\t" << this->nombre << "\t" << "normal" << "\t" << "ejecucion" << "\t" << this->prioridad << endl;
 		}
 		else{
-			cout << this->pdi << "\t" << this->nombre << "\t" << "normal" << "\t" << "ejecucion" << "\t" << this->prioridad << endl;
+			cout << this->pdi << "\t" << this->nombre << "\t" << "tiempo real" << "\t" << "ejecucion" << "\t" << this->prioridad << endl;
 		}
 		}
 	else{
