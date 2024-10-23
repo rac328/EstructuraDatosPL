@@ -128,15 +128,15 @@ void ListaDobleEnlazada::buscarPorPID(int PID, Pila& pila){
 				//cout << "Encontrado en primero !!!!\n";
 				primero = sig->listnodsig;
 			}
+			else if (sig == ultimo){
+				ultimo = sig->listnodant;
+			}
 			else{ // ahora para cuando esta en el medio
 			//cout << "Encontrado en medio. Anterior: " << sig->listnodant->valorProceso->getPDI() << " Pasa a " << proceso->listnodsig->valorProceso->getPDI();
 				sig->listnodant->listnodsig = sig->listnodsig; //el lugar del proceso que se 
 				//elimina pasa a ser del proceso con la posicion siguiente
 				sig->listnodsig->listnodant = sig->listnodant;
 				}
-			if (sig == ultimo){
-				ultimo = sig->listnodant;
-			}
 			
 			encontrado = true;
 			sig->valorProceso->setEstado(false);
